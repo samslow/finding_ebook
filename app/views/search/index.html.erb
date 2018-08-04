@@ -1,11 +1,13 @@
 
+<style>
+    .zoom {
+        zoom: 1.4
+    }
+</style>
 
-<div style='height:1000px;'>
-<h3 align="middle"><'<%=@title %>' 검색 결과></h3> <!-- 여기에 params로 어떤 검색을 했는지 써줄것 -->
-<h4 align="right" style="margin-bottom:0;">총 찾은 책 갯수: <%= @books.count %> 권</h2>
-<h6 align="right" style="color: gray; margin-top: 0;">📖 현재는 100권까지만 지원합니다 </h6>
-<hr>
-<div class="carousel" style="overflow: visible !important;">
+<div style='height:1000px;' >
+<h3 align="middle" style="color:white;" class='font'>< '<%=@title %>' 검색 결과 ></h3> <!-- 여기에 params로 어떤 검색을 했는지 써줄것 -->
+<div class="carousel" style="overflow: visible !important; zoom: 1.8;">
 <div>
 <% @books.each do |book| %>
 
@@ -24,7 +26,7 @@
         </div>
         <div class="carousel-item" style="overflow: visible !important;">
             <img src="<%= @img%>" onerror = "this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdg7filAZr2kOa36fyq4PtQvKx-LBypTWvq2anpWlTaQiklbJN'">
-            <p align="middle"><em><%= @book[1].text %></em></p>
+            <p align="middle" style="color:white;"><em><strong><%= @book[1].text %></strong></em></p>
         <!-- <a href="<%=@link%>">
             <%=  @book[5].text %></a> -->
             <% @bookArr.push(@book[1].text) %>

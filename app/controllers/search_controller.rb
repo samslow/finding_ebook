@@ -10,13 +10,4 @@ class SearchController < ApplicationController
     @i = 1
     @bookArr = []
   end
-
-  def titleOverlap?(book_title)
-    unless @bookArr.find(book_title)
-      @bookArr.append(book_title)
-      return true
-    end
-    return false
-  end
-
 end

@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ebooker</title>
-    <%= csrf_meta_tags %>
+    <title>Hack</title>
+  
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   </head>
 
   <body>
     <%= yield %>
+    <!--bootstrap-->
+
+    <!--materialize-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+      <!--typed.js-->
+      <script src="js/typed.min.js"></script>
+    <!--타이핑-->
+    <script>
+        var typed = new Typed('#typed',{
+                        stringsElement: '#typed-strings',
+                        typeSpeed: 180
+                      });
+    </script>
+    <!--와우 js-->
+    <script src="/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  
   </body>
 </html>

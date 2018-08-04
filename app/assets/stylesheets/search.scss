@@ -1,3 +1,28 @@
-// Place all the styles related to the search controller here.
+// Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    margin-top: 0px;
+    margin: 0px;
+    //그라데이션 부분 -------------------
+background: linear-gradient(281deg, rgb(160,160,160), rgb(235,235,235));
+background-size: 400% 400%;
+animation: AnimationName 10s ease infinite;
+
+@keyframes AnimationName { 
+    0%{background-position:0% 58%}
+    50%{background-position:100% 43%}
+    100%{background-position:0% 58%}
+}
+//끝
+}
+.search{
+    text-align: center;
+    margin-bottom: 0px;
+    border-bottom: 2px solid black;
+    height: 70px;
+    padding-top: 20px;
+}
+.result{
+    margin-left: 0px;
+}

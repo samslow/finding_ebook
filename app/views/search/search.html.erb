@@ -1,0 +1,63 @@
+<style>
+    .layout {
+        display: flex;
+        justify-content: center;
+    }
+    #searchBar {
+        width: 35%;
+        background-color: white;
+        border-radius: 5px;
+        padding-left: 10px;
+        width: 45%
+      
+        
+    }    
+    #img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    body {
+        background-color: rgb(237, 237, 237);
+    }
+    
+    .typed_wrap {
+   display: inline;
+}
+
+#top{
+    height: 7rem;
+}
+
+select {
+        display: block;
+        width: 10%;
+}
+
+option {
+    text-align: center;
+    font-size: 8 rem;
+}
+
+</style>
+    <div>
+        <div id="top">
+            <div id="typed-strings">
+                <p style="display: none">E북은 이북이다!</p>
+            </div>
+        <span class="layout font" id="typed"></span>
+        </div>
+        <!--검색창-->
+        <form class="layout" action="/search/index">
+            <select name="search_type">
+                <option value="title">제목</option>
+                <option value="author">작가</option>
+            </select>
+            <input id='searchBar' type="text" placeholder="BookName" name="title">
+            <button type='submit' class='btn btn-outline-secondary font2'>search</button>
+            </form>
+        <br>
+        <div class='layout' id='img'>
+            <%=image_tag("typewriter.png")%>
+        </div>
+    </div>

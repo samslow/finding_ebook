@@ -5,8 +5,13 @@
 <h4><'(책 제목)' 검색 결과></h4> <!-- 여기에 params로 어떤 검색을 했는지 써줄것 -->
 
 <% @books.each do |book| %>
-    
-    <p>[<%= @i %>] <%= book.children.children.children.children[1].text %> /  
-    <%= book.children.children.children.children[5].text %></p>
-    <% @i= @i+1 %>
+    <% @book = book.children.children.children.children %>
+
+    <% if @bookArr.include?(@book[1].text) %>
+        <%=  @book[5].text %>
+    <% else %>
+        <h1><%= @book[1].text %></h1>
+        <%=  @book[5].text %>
+        <% @bookArr.push(@book[1].text) %>
+    <% end %>
 <% end %>

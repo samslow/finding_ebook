@@ -1,14 +1,7 @@
-
-<style>
-    .zoom {
-        zoom: 1.4
-    }
-</style>
-
 <div>
 <h3 align="middle" style="color:white;" class='font'>< '<%=@title %>' 검색 결과 ></h3> <!-- 여기에 params로 어떤 검색을 했는지 써줄것 -->
 
-<div class="carousel" style="overflow: visible !important; zoom: 1.6; margin-bottom:100px;">
+<div class="carousel" style="overflow: visible !important; zoom: 1.6;">
 <div>
 <% @books.each do |book| %>
 
@@ -43,3 +36,6 @@
     var instances = M.Carousel.init(elems);
   });
 </script>  
+<div align="middle" style="margin-top: 80px;">
+<a href="/" class="waves-effect waves-light btn" >HOME</a>
+</div>

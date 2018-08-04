@@ -1,6 +1,6 @@
 
 <h2 style="margin-bottom:0;">총 찾은 책 갯수: <%= @books.count %> 권</h2>
-<h6 style="color: gray; margin-top: 0;">현재는 100권까지만 지원합니다 </h6>
+<h6 style="color: gray; margin-top: 0;">📖 현재는 100권까지만 지원합니다 </h6>
 <hr>
 <h4><'(책 제목)' 검색 결과></h4> <!-- 여기에 params로 어떤 검색을 했는지 써줄것 -->
 
@@ -10,7 +10,7 @@
     <% if @bookArr.include?(@book[1].text) %>
         <%=  @book[5].text %>
     <% else %>
-        <h1>[<%= @i %>]<%= @book[1].text %></h1>
+        <h1>[<%= @i %>] <%= @book[1].text %></h1>
         <%=  @book[5].text %>
         <% @bookArr.push(@book[1].text) %>
         <% @i = @i+1 %>

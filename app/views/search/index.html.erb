@@ -1,9 +1,8 @@
 
-<h2 style="margin-bottom:0;">총 찾은 책 갯수: <%= @books.count %> 권</h2>
-<h6 style="color: gray; margin-top: 0;">📖 현재는 100권까지만 지원합니다 </h6>
-<hr>
-<h4><'(책 제목)' 검색 결과></h4> <!-- 여기에 params로 어떤 검색을 했는지 써줄것 -->
-
+<h2 align="middle"><'(책 제목)' 검색 결과></h4> <!-- 여기에 params로 어떤 검색을 했는지 써줄것 -->
+<h4 align="right" style="margin-bottom:0;">총 찾은 책 갯수: <%= @books.count %> 권</h2>
+<h6 align="right" style="color: gray; margin-top: 0;">📖 현재는 100권까지만 지원합니다 </h6>
+<div>
 <% @books.each do |book| %>
     <% @book = book.children.children.children.children %>
     <% @img = book.children.children.children[2].attr('src')%>
@@ -11,17 +10,17 @@
 
     <% if @bookArr.include?(@book[1].text) %>
         <a href="<%=@link%>">
-        <%=  @book[5].text %><br></a>
-        <hr>
+        <%=  @book[5].text %></br></a>
+    
     <% else %>
-
-        <img src="<%= @img%>" height = "200px" width ="150px">
-        <h1>[<%= @i %>]<%= @book[1].text %></h1>
+</div>
+<div style = "margin-top: 100px; width: 200px;" >
+        <img src="<%= @img%>" height = "200px" width ="150px" onerror = "this.src='https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg'">
+        <h2>[<%= @i %>]<%= @book[1].text %></h2><hr width = "200px;" align="left">
         <a href="<%=@link%>">
-        <%=  @book[5].text %></a>
+        <%=  @book[5].text %></br></a>
         <% @bookArr.push(@book[1].text) %>
         <% @i = @i+1 %>
         
     <% end %>
-    <hr>
 <% end %>

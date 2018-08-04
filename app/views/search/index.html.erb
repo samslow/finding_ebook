@@ -12,8 +12,6 @@
     <% if @bookArr.include?(@book[1].text) %>
     <a href="<%=@link%>">
         <%=  @book[5].text %><br></a>
-      
-        
     <% else %>
 
         <img src="<%= @img%>" height = "200px" width ="150px">
@@ -24,4 +22,5 @@
         <% @i = @i+1 %>
         
     <% end %>
+    <hr>
 <% end %>

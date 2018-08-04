@@ -8,7 +8,6 @@
 <h1 align="center">This book is E-book(이북은 이북이다)</h1>
 
 <p align="center">
-	<a href="https://sigoss.github.io/hackathon2018/"><img src="https://img.shields.io/badge/OpenHack-3th-blue.svg"></a>
 	<a href="https://github.com/DdukTwiSun/server/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"></a>	
 </p>
 

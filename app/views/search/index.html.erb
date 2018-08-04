@@ -10,8 +10,9 @@
     <% @link = book.children.children.children.at("a").attr('href')%>
 
     <% if @bookArr.include?(@book[1].text) %>
-    <a href="<%=@link%>">
+        <a href="<%=@link%>">
         <%=  @book[5].text %><br></a>
+        <hr>
     <% else %>
 
         <img src="<%= @img%>" height = "200px" width ="150px">

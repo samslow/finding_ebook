@@ -8,7 +8,6 @@ class SearchController < ApplicationController
     @result = Nokogiri::HTML.parse(@url)
     # nokogiri를 이용하여 원하는 부분을 골라냄
     @books = @result.css('div>table.ebookList')
-    @i = 1
     @bookArr = []
   end
   def search 

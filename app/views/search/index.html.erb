@@ -10,8 +10,10 @@
     <% if @bookArr.include?(@book[1].text) %>
         <%=  @book[5].text %>
     <% else %>
-        <h1><%= @book[1].text %></h1>
+        <h1>[<%= @i %>]<%= @book[1].text %></h1>
         <%=  @book[5].text %>
         <% @bookArr.push(@book[1].text) %>
+         <% @i = @i+1 %>
     <% end %>
+   
 <% end %>

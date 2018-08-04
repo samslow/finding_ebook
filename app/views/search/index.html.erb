@@ -5,9 +5,10 @@
     }
 </style>
 
-<div style='height:1000px;' >
+<div>
 <h3 align="middle" style="color:white;" class='font'>< '<%=@title %>' 검색 결과 ></h3> <!-- 여기에 params로 어떤 검색을 했는지 써줄것 -->
-<div class="carousel" style="overflow: visible !important; zoom: 1.8;">
+
+<div class="carousel" style="overflow: visible !important; zoom: 1.6; margin-bottom:100px;">
 <div>
 <% @books.each do |book| %>
 
@@ -25,7 +26,7 @@
         <% else %>
         </div>
         <div class="carousel-item" style="overflow: visible !important;">
-            <img src="<%= @img%>" onerror = "this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdg7filAZr2kOa36fyq4PtQvKx-LBypTWvq2anpWlTaQiklbJN'">
+            <img src="<%= @img%>" onerror = "this.src='/black.png'">
             <p align="middle" style="color:white;"><em><strong><%= @book[1].text %></strong></em></p>
         <!-- <a href="<%=@link%>">
             <%=  @book[5].text %></a> -->
@@ -35,7 +36,7 @@
     <% end %>
     </div>
 </div>
-  
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
